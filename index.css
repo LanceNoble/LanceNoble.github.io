@@ -1,3 +1,80 @@
-h1 {
-    color: blue;
+@font-face {
+    font-family: 'montserratthin';
+    src: url('/media/fonts/montserrat-variablefont_wght-webfont.woff2') format('woff2'),
+         url('/media/fonts/montserrat-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    width: 1000px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'montserratthin';
+    color: #F4F3EE;
+    background-image: linear-gradient(#8A817C 0px, #463F3A 256px);
+}
+
+body > header {
+    margin-bottom: 128px;
+    text-align: center;
+}
+
+body > header > h1 {
+    font-size: 4em;
+}
+
+body > header > p {
+    font-size: 32px;
+}
+
+article {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 48px;
+    margin-bottom: 64px;
+}
+
+article:first-of-type {
+    display: grid;
+    grid-template-areas:
+        "headshot header"
+        "   links header";
+    justify-content: center;
+    column-gap: 48px;
+    margin-bottom: 0px;
+}
+
+article:first-of-type > header {
+    grid-area: header;
+}
+
+article:first-of-type > img {
+    grid-area: headshot;
+}
+
+article:first-of-type > ul {
+    grid-area: links;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+article:first-of-type > ul > li {
+    display: inline-block;
+}
+
+article:first-of-type > ul > li > a > svg:hover {
+    fill: #E0AFA0;
+}
+
+hr {
+    width: 1000px;
+    margin-bottom: 32px;
+}
+
+article > header > p {
+    line-height: 1.5;
 }
